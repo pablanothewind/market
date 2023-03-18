@@ -1,0 +1,36 @@
+h1{
+    color: black;
+    text-align: center;
+}
+
+h2{
+    color: black;
+    text-align: center;
+}
+
+h3{
+    color: black;
+    text-align: center;
+}
+
+p{
+    color: black;
+    text-align: center; 
+}
+
+img{ 
+    display: block;
+    margin: 0 auto;
+  }
+
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+.grayout{
+    opacity: 0.6; /* Real browsers */
+    filter: alpha(opacity = 60); /* MSIE */
+}
