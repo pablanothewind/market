@@ -285,15 +285,11 @@ body {
   </div>
 
 <!-- Container (Vaklues Section) -->
-<div class="container-fluid bg-grey">
-  <div class="image">
-<img src="{% static 'img/corn.jpeg' %}" alt="corn" style="width:400px;height:300px;">
-  </div>
-  <div class="text">
-    <br> <br> <br>
-  <h2>Our Values</h2><br> 
-  <p>
-    We are committed to supporting local farmers and
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8 slideanim">
+      <h2>About</h2>
+      <p>We are committed to supporting local farmers and
     producers, and we are working with a network of suppliers to
     ensure that our products are locally sourced when available.
     Amburn's Market desires to continue to be a staple in the Blount
@@ -302,10 +298,17 @@ body {
     treats, and a warm and welcoming
     atmosphere. With a commitment to community involvement and
     hometown service, we would love to become your favorite fresh
-    food destination. </p>
+    food destination.<br> </p>
+      <br>
+      </div>
+      <div class="col-sm-4 slideanim">
+        <span>
+          <img src="{% static 'img/corn.jpeg' %}" alt="owners" style="width:400px;height:300px;">  
+        </span>
+      </div>
+    </div>
   </div>
-</div>
-
+ 
 
 <!-- Container Location -->
 <div id="location" class="container-fluid text-center ">
