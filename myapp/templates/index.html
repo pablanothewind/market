@@ -220,6 +220,16 @@ body {
       font-size: 150px;
     }
   }
+    #map-image {
+  width: 100%; /* Set the image width to 100% by default */
+  height: auto; /* Let the height adjust proportionally */
+
+  /* Add a media query for desktop screens */
+  @media (min-width: 768px) {
+    width: 800px; /* Set the width to 800px on desktop */
+    height: 600px; /* Set the height to 600px on desktop */
+      }
+    }
 </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -318,7 +328,7 @@ body {
 <div id="location" class="container-fluid text-center ">
   <h2 >
   Location<br>
-  <img src="{% static 'img/map.png' %}" alt="logo" style="width:800px;height:600px;">  
+  <img src="{% static 'img/map.png' %}" alt="logo">  
   </h2> 
 </div>
 
