@@ -346,12 +346,44 @@ Thank you for letting us serve you!<br> </p>
  
 
 <!-- Container Location -->
-<div id="location" class="container-fluid text-center ">
-  <h2 >
-  Location<br>
-  <img src="{% static 'img/map.png' %}" alt="logo" style="width:400px;height:300px;">  
-  </h2> 
+<div id="location" class="container-fluid text-center">
+  <h2>Location</h2>
+
+  <!-- Responsive Google Map -->
+  <div class="map-embed"
+       style="position:relative;width:100%;max-width:800px;margin:0 auto;overflow:hidden;
+              border-radius:12px;box-shadow:0 4px 14px rgba(0,0,0,.08);">
+    <div style="padding-top:75%;"></div> <!-- 4:3 ratio -->
+    <iframe
+      title="Map to Amburn's Market"
+      aria-label="Map to Amburn's Market"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+      src="https://www.google.com/maps?q=222+W+Church+Ave,+Maryville,+TN+37801&output=embed&z=15">
+    </iframe>
+  </div>
+
+  <!-- Google Maps buttons -->
+  <div style="margin-top:14px;">
+    <a class="btn btn-primary"
+       href="https://www.google.com/maps/search/?api=1&query=222+W+Church+Ave,+Maryville,+TN+37801"
+       target="_blank" rel="noopener">
+      Open in Google Maps
+    </a>
+    <a class="btn btn-outline-secondary"
+       href="https://www.google.com/maps/dir/?api=1&destination=222+W+Church+Ave,+Maryville,+TN+37801"
+       target="_blank" rel="noopener">
+      Get Directions
+    </a>
+  </div>
+
+  <noscript>
+    <p><a href="https://www.google.com/maps/search/?api=1&query=222+W+Church+Ave,+Maryville,+TN+37801">
+      View map</a></p>
+  </noscript>
 </div>
+
 
 <div id="hours" class="container-fluid text-center">
   <h3>
@@ -450,6 +482,7 @@ $(document).ready(function(){
 
 </body>
 </html>
+
 
 
 
