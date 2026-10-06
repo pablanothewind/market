@@ -5,3 +5,6 @@ def index(request):
 
 def new(request):
     return render(request, 'new.html')
+
+def privacy(request):
+    return render(request, 'privacy.html')

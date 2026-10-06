@@ -269,7 +269,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
           <li><a href="#location">Location</a></li>
           <li><a href="#hours">Hours</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="https://amburns-market.square.site">Shop</a></li>
           <li><a href="{% static 'img/new.html' %}">Events</a></li>
         </ul>
   </div>
@@ -281,31 +280,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 <h1 class="a11y-only">Amburn’s Market</h1>
 <div id="home" class="jumbotron text-center" style="padding-top: 350px;">
   <br><br>
-  <a href="https://amburns-market.square.site"
-    class="btn btn-primary btn-lg market-shop"
-    style="
-      background-color: black;
-      border: 2px solid black;
-      padding: 20px 80px;
-      margin: 20px auto;
-      display: block;
-      text-align: center;
-    "
-  >
-    <span
-      style="
-        color: white;
-        text-decoration: none;
-        width: 100%;
-        font-weight: bold;
-        text-transform: uppercase;
-        font-size: 1.25em;
-        display: block;
-      "
-    >
-      Shop
-    </span>
-  </a>
 </div>
 
     
@@ -455,6 +429,7 @@ Thank you for letting us serve <br> </p>
   <a href="#myPage" title="To Top" aria-label="Back to top">
     <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
   </a>
+  <p><a href="{% url 'privacy' %}" style="color: #444; text-decoration: underline;">Privacy Policy</a></p>
 </footer>
 
 <script>
