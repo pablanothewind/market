@@ -6,7 +6,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amburn's Market</title>
+    <title>Amburn’s Market | Local Produce &amp; Foods in Maryville, TN</title>
+    <meta name="description" content="Visit Amburn’s Market in Maryville, Tennessee for seasonal produce, local meats, dairy, baked goods, flowers, and custom gift baskets. Find hours and directions.">
+    <link rel="canonical" href="https://amburnsmkt.com/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "GroceryStore", "name": "Amburn’s Market", "url": "https://amburnsmkt.com/", "telephone": "+1-865-336-1001", "email": "info.amburnsmarket@gmail.com", "address": {"@type": "PostalAddress", "streetAddress": "222 W Church Avenue", "addressLocality": "Maryville", "addressRegion": "TN", "postalCode": "37801", "addressCountry": "US"}}</script>
 </head>
 
 
@@ -230,16 +233,30 @@ body {
     height: 600px; /* Set the height to 600px on desktop */
       }
     }
+
+/* Compact permanent labels and readable placeholder text. */
+#contact .contact-field-label { display:block; margin:0 0 3px; font-size:12px; line-height:16px; font-weight:400; color:#444; text-align:left; }
+#contact .form-control::placeholder { color:#757575; opacity:1; }
+/* Screen-reader access without changing the ordinary layout. */
+.market-shop { width:fit-content; }
+@media (max-width:768px) { .market-shop { width:100%; } }
+.a11y-only { position:absolute !important; width:1px !important; height:1px !important; padding:0 !important; margin:-1px !important; overflow:hidden !important; clip:rect(0,0,0,0) !important; white-space:nowrap !important; border:0 !important; }
+.a11y-focusable:focus { position:fixed !important; top:8px; left:8px; width:auto !important; height:auto !important; margin:0 !important; clip:auto !important; overflow:visible !important; padding:10px 16px !important; z-index:1000000; background:#fff; color:#111; }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible { outline:3px solid #124e9b !important; outline-offset:3px; }
+.slideanim { visibility:visible; opacity:0; }
+.slideanim.slide, .slideanim:focus-within { opacity:1; }
+@media (prefers-reduced-motion:reduce) { .slideanim { opacity:1; } *, *::before, *::after { animation:none !important; transition:none !important; } }
 </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
-<nav class="navbar navbar-default navbar-fixed-top">
-  <a class="navbar-brand" href="#">
-    <img src="{% static 'img/logo.png' %}"  alt="logo" style="width:45px;">
+<a href="#main-content" class="a11y-only a11y-focusable">Skip to main content</a>
+<nav class="navbar navbar-default navbar-fixed-top" aria-label="Main navigation">
+  <a class="navbar-brand" href="#myPage" aria-label="Amburn’s Market home">
+    <img src="{% static 'img/logo.png' %}"  alt="Amburn’s Market" style="width:45px;">
   </a>
 
-  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar" aria-label="Navigation menu" aria-controls="topNavBar" aria-expanded="false">
     <span class="icon-bar"></span>
     <span class="icon-bar"></span>
     <span class="icon-bar"></span>
@@ -260,10 +277,12 @@ body {
 </nav> 
 
 
+<main id="main-content" tabindex="-1">
+<h1 class="a11y-only">Amburn’s Market</h1>
 <div id="home" class="jumbotron text-center" style="padding-top: 350px;">
   <br><br>
-  <button
-    class="btn btn-primary btn-lg"
+  <a href="https://amburns-market.square.site"
+    class="btn btn-primary btn-lg market-shop"
     style="
       background-color: black;
       border: 2px solid black;
@@ -273,9 +292,7 @@ body {
       text-align: center;
     "
   >
-    <a
-      href="https://amburns-market.square.site"
-      role="button"
+    <span
       style="
         color: white;
         text-decoration: none;
@@ -287,8 +304,8 @@ body {
       "
     >
       Shop
-    </a>
-  </button>
+    </span>
+  </a>
 </div>
 
     
@@ -306,13 +323,13 @@ At Amburn’s Market, we believe in community, and we love ours!
 <br>
 Thank you for letting us serve <br> </p>
       <br>
-        <button class="btn btn-default btn-lg" style="color: black; background-color: white; border: 2px solid black; padding: 10px;">
-            <a href="#contact" style="color: black; text-decoration: none;">Get in Touch</a>
-        </button>
+        <a href="#contact" class="btn btn-default btn-lg" style="color: black; background-color: white; border: 2px solid black; padding: 10px;">
+            <span style="color: black; text-decoration: none;">Get in Touch</span>
+        </a>
       </div>
       <div class="col-sm-4 slideanim">
         <span>
-          <img src="{% static 'img/owners.jpeg' %}" alt="owners">  
+          <img src="{% static 'img/owners.jpeg' %}" alt="The owners of Amburn’s Market">
         </span>
       </div>
     </div>
@@ -331,7 +348,7 @@ Thank you for letting us serve <br> </p>
       </div>
       <div class="col-sm-4 slideanim">
         <span>
-          <img src="{% static 'img/corn.jpeg' %}" alt="owners" style="width:400px;height:300px;">  
+          <img src="{% static 'img/corn.jpeg' %}" alt="Fresh corn" style="width:400px;height:300px;">
         </span>
       </div>
     </div>
@@ -399,17 +416,20 @@ Thank you for letting us serve <br> </p>
     <div class="form-group">
       <div class="row">
         <div class="col-md-6">
-          <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+          <label class="contact-field-label" for="market-name">Full Name (required)</label>
+          <input id="market-name" autocomplete="name" type="text" name="name" class="form-control" required>
         </div>
         <div class="col-md-6">
-          <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+          <label class="contact-field-label" for="market-email">Email Address (required)</label>
+          <input id="market-email" autocomplete="email" type="email" name="email" class="form-control" required>
         </div>
       </div>
     </div>
     <div class="form-group">
       <div class="row">
         <div class="col">
-          <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
+          <label class="contact-field-label" for="market-message">Your Message (required)</label>
+          <textarea id="market-message" class="form-control" name="message" rows="10" required></textarea>
         </div>
       </div>
     </div>
@@ -430,9 +450,10 @@ Thank you for letting us serve <br> </p>
 <!-- Image of location/map 
 <img src="#" class="w3-image w3-greyscale-min" style="width:100%"> -->
 
+</main>
 <footer class="container-fluid text-center">
-  <a href="#myPage" title="To Top">
-    <span class="glyphicon glyphicon-chevron-up"></span>
+  <a href="#myPage" title="To Top" aria-label="Back to top">
+    <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
   </a>
 </footer>
 
@@ -473,6 +494,8 @@ $(document).ready(function(){
 })
 </script>
 
+<script src="{% static 'img/a11y.js' %}"></script>
+<noscript><style>.slideanim{visibility:visible;opacity:1}</style></noscript>
 </body>
 </html>
 
